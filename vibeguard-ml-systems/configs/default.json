@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "samples_per_class": 1000,
+  "train_split": 0.64,
+  "validation_split": 0.16,
+  "test_split": 0.20,
+  "training": {
+    "epochs": 40,
+    "batch_size": 128,
+    "seed": 42,
+    "device": "auto"
+  },
+  "model": {
+    "type": "VibrationMLP",
+    "hidden_dims": [96, 48],
+    "dropout": 0.12,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "loss": "CrossEntropyLoss",
+    "gradient_clip_norm": 2.0,
+    "early_stopping_patience": 8
+  },
+  "baseline": {
+    "type": "ExtraTreesClassifier",
+    "n_estimators": 250
+  },
+  "optimization": {
+    "device": "cpu",
+    "thread_count": 1,
+    "batch_sizes": [1, 32, 128]
+  }
+}

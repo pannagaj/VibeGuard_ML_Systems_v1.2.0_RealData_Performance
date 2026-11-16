@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.dist/
+build/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.DS_Store
+Thumbs.db
+*.log
+artifacts/tmp/
+artifacts/experiment_*/
+
+# Downloaded CWRU source data and generated model binaries (do not commit raw recordings).
+data/cwru/raw/*.mat
+data/cwru/cwru_features.npz
+artifacts/cwru/*.pt
+artifacts/cwru/*.joblib
+artifacts/cwru_profile/*.pt

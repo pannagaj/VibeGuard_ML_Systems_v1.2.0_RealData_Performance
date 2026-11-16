@@ -1,0 +1,127 @@
+{
+  "extratrees_baseline": {
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        200,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        200
+      ]
+    ],
+    "log_loss": 3.0100482737228656e-05,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "model": "ExtraTreesClassifier",
+    "per_class": {
+      "bearing_fault": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "healthy": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "imbalance": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "misalignment": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      }
+    },
+    "test_samples": 800
+  },
+  "pytorch_mlp": {
+    "accuracy": 1.0,
+    "best_epoch": 39,
+    "best_validation_loss": 0.0037601047200344815,
+    "confusion_matrix": [
+      [
+        200,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        200
+      ]
+    ],
+    "device": "cpu",
+    "log_loss": 0.00032532601813653174,
+    "macro_f1": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "model": "VibrationMLP",
+    "per_class": {
+      "bearing_fault": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "healthy": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "imbalance": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      },
+      "misalignment": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 200.0
+      }
+    },
+    "test_samples": 800
+  }
+}

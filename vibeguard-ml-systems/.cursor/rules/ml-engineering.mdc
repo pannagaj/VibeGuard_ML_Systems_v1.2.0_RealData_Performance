@@ -1,0 +1,6 @@
+---
+description: VibeGuard ML engineering, reproducibility, safety, and test requirements
+alwaysApply: true
+---
+
+Read `AGENTS.md` before modifying the project. Preserve the versioned 20-feature contract and four-class ordering. Fit preprocessing on training data only; use validation data for checkpoint selection and reserve test data for final metrics. Validate finite values, shapes, labels, and artifact schemas. Benchmark actual latency and numerical parity rather than claiming a speed-up. Keep CPU inference functional and CUDA optional. Synthetic results must never be described as real-world industrial validation. Add tests and docs with every feature. Run the commands in `AGENTS.md` and report only checks that truly passed.

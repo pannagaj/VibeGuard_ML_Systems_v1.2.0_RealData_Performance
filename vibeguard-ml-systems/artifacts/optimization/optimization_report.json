@@ -1,0 +1,316 @@
+{
+  "artifacts": {
+    "pytorch_dynamic_int8": "artifacts/optimization/model_dynamic_int8.pt",
+    "torch_export_fp32": "artifacts/optimization/model_exported_fp32.pt2"
+  },
+  "device": "cpu",
+  "experiment": "CPU inference representation comparison",
+  "held_out_test_evaluation": {
+    "data_path": "data/motor_vibration.csv",
+    "evaluation_split": "held-out test split; split seed from source checkpoint",
+    "max_absolute_probability_delta_vs_eager": {
+      "pytorch_dynamic_int8": 0.021448254585266113,
+      "torch_export_fp32": 0.0
+    },
+    "prediction_agreement_vs_eager": {
+      "pytorch_dynamic_int8": 1.0,
+      "torch_export_fp32": 1.0
+    },
+    "pytorch_dynamic_int8": {
+      "accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          200,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          200
+        ]
+      ],
+      "log_loss": 0.00031836235934933863,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "per_class": {
+        "bearing_fault": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "healthy": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "imbalance": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "misalignment": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        }
+      }
+    },
+    "pytorch_eager_fp32": {
+      "accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          200,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          200
+        ]
+      ],
+      "log_loss": 0.0003253318558520785,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "per_class": {
+        "bearing_fault": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "healthy": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "imbalance": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "misalignment": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        }
+      }
+    },
+    "test_samples": 800,
+    "torch_export_fp32": {
+      "accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          200,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          200
+        ]
+      ],
+      "log_loss": 0.0003253318558520785,
+      "macro_f1": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "per_class": {
+        "bearing_fault": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "healthy": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "imbalance": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "misalignment": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 200.0
+        }
+      }
+    }
+  },
+  "host": {
+    "logical_cpu_count": 3,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "processor": "not reported by host",
+    "python_version": "3.13.5",
+    "pytorch_version": "2.10.0+cpu"
+  },
+  "interpretation": "All representations accept raw engineered feature vectors and include the training-fitted standardization step. Compare measured p50/p95 latency and throughput on the same machine. Small models can be dominated by dispatch overhead; export or INT8 may not be faster for every batch size.",
+  "quantization_backend": "torch.ao.quantization.quantize_dynamic (compatibility fallback)",
+  "representations": {
+    "pytorch_dynamic_int8": {
+      "artifact_bytes": 14105,
+      "measurements": [
+        {
+          "batch_size": 1,
+          "mean_ms_per_batch": 0.09831993332833615,
+          "p50_ms_per_batch": 0.08354850001524028,
+          "p95_ms_per_batch": 0.16944579999744752,
+          "runs": 300,
+          "throughput_samples_per_second": 10147.282048706693
+        },
+        {
+          "batch_size": 32,
+          "mean_ms_per_batch": 0.11829251331770745,
+          "p50_ms_per_batch": 0.09309249981015455,
+          "p95_ms_per_batch": 0.23051605021464638,
+          "runs": 300,
+          "throughput_samples_per_second": 269966.7173220205
+        },
+        {
+          "batch_size": 128,
+          "mean_ms_per_batch": 0.15764493000763954,
+          "p50_ms_per_batch": 0.11730299979717529,
+          "p95_ms_per_batch": 0.28532654971513693,
+          "runs": 300,
+          "throughput_samples_per_second": 810606.2593943119
+        }
+      ],
+      "numerical_drift_vs_eager": {
+        "max_absolute_probability_delta": 0.05439075827598572,
+        "mean_absolute_probability_delta": 0.004180895164608955,
+        "prediction_agreement": 1.0
+      },
+      "persisted_artifact_max_probability_delta": 0.0
+    },
+    "pytorch_eager_fp32": {
+      "measurements": [
+        {
+          "batch_size": 1,
+          "mean_ms_per_batch": 0.04445789000177077,
+          "p50_ms_per_batch": 0.037259999771777075,
+          "p95_ms_per_batch": 0.09444099962365742,
+          "runs": 300,
+          "throughput_samples_per_second": 22403.285575951606
+        },
+        {
+          "batch_size": 32,
+          "mean_ms_per_batch": 0.05589221334200071,
+          "p50_ms_per_batch": 0.046769000164204044,
+          "p95_ms_per_batch": 0.08528525008841838,
+          "runs": 300,
+          "throughput_samples_per_second": 570841.318425321
+        },
+        {
+          "batch_size": 128,
+          "mean_ms_per_batch": 0.09231395334912425,
+          "p50_ms_per_batch": 0.07133999997677165,
+          "p95_ms_per_batch": 0.1814554498878352,
+          "runs": 300,
+          "throughput_samples_per_second": 1382721.5048814223
+        }
+      ],
+      "numerical_drift_vs_eager": {
+        "max_absolute_probability_delta": 0.0,
+        "mean_absolute_probability_delta": 0.0,
+        "prediction_agreement": 1.0
+      },
+      "parameter_state_bytes": 27632
+    },
+    "torch_export_fp32": {
+      "artifact_bytes": 53097,
+      "measurements": [
+        {
+          "batch_size": 1,
+          "mean_ms_per_batch": 0.10168680334421272,
+          "p50_ms_per_batch": 0.07268750005096081,
+          "p95_ms_per_batch": 0.18083370005115287,
+          "runs": 300,
+          "throughput_samples_per_second": 9815.513497531436
+        },
+        {
+          "batch_size": 32,
+          "mean_ms_per_batch": 0.892088673328241,
+          "p50_ms_per_batch": 0.08747900005801057,
+          "p95_ms_per_batch": 0.22716104979281226,
+          "runs": 300,
+          "throughput_samples_per_second": 35854.16028984359
+        },
+        {
+          "batch_size": 128,
+          "mean_ms_per_batch": 0.1337461066608133,
+          "p50_ms_per_batch": 0.1111990000026708,
+          "p95_ms_per_batch": 0.24223210029958867,
+          "runs": 300,
+          "throughput_samples_per_second": 955469.9497655442
+        }
+      ],
+      "numerical_drift_vs_eager": {
+        "max_absolute_probability_delta": 0.0,
+        "mean_absolute_probability_delta": 0.0,
+        "prediction_agreement": 1.0
+      }
+    }
+  },
+  "runs_per_batch_size": 300,
+  "seed": 42,
+  "torch_threads": 1,
+  "warmup_iterations_per_batch_size": 40
+}

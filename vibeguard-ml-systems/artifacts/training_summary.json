@@ -1,0 +1,19 @@
+{
+  "baseline_estimators": 250,
+  "baseline_included": true,
+  "best_epoch": 39,
+  "checkpoint": "artifacts/model.pt",
+  "device": "cpu",
+  "epochs_completed": 40,
+  "model_dropout": 0.12,
+  "model_hidden_dims": [
+    96,
+    48
+  ],
+  "output_dir": "artifacts",
+  "test_accuracy": 1.0,
+  "test_macro_f1": 1.0,
+  "test_samples": 800,
+  "train_samples": 2560,
+  "validation_samples": 640
+}

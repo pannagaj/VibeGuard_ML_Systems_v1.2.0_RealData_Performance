@@ -1,0 +1,4 @@
+# Install the project and its runtime dependencies:
+#   python -m pip install -e .
+# Optional test/lint tools:
+#   python -m pip install -e '.[dev]'

@@ -1,0 +1,34 @@
+{
+  "device": "cpu",
+  "measurement_iterations_per_batch": 300,
+  "model": "VibrationMLP",
+  "notes": "Synthetic standardized inputs; includes Python and tensor-conversion overhead.",
+  "results": [
+    {
+      "batch_size": 1,
+      "latency_mean_ms_per_batch": 0.0679757499998838,
+      "latency_p50_ms_per_batch": 0.05810600009681366,
+      "latency_p95_ms_per_batch": 0.0963821002869736,
+      "runs": 300,
+      "throughput_samples_per_second": 14672.718412926608
+    },
+    {
+      "batch_size": 32,
+      "latency_mean_ms_per_batch": 0.08884524667791993,
+      "latency_p50_ms_per_batch": 0.07681800002501404,
+      "latency_p95_ms_per_batch": 0.14137100035895855,
+      "runs": 300,
+      "throughput_samples_per_second": 359067.4614054827
+    },
+    {
+      "batch_size": 128,
+      "latency_mean_ms_per_batch": 0.12058004333994177,
+      "latency_p50_ms_per_batch": 0.11123949980174075,
+      "latency_p95_ms_per_batch": 0.1553075999254361,
+      "runs": 300,
+      "throughput_samples_per_second": 1059614.6076906305
+    }
+  ],
+  "torch_threads": 1,
+  "warmup_iterations_per_batch": 40
+}

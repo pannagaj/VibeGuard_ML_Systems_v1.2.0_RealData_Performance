@@ -1,0 +1,62 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      200,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      200,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      200,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      200
+    ]
+  ],
+  "log_loss": 0.00032532601813653174,
+  "macro_f1": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "model": "VibrationMLP",
+  "per_class": {
+    "bearing_fault": {
+      "f1-score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 200.0
+    },
+    "healthy": {
+      "f1-score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 200.0
+    },
+    "imbalance": {
+      "f1-score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 200.0
+    },
+    "misalignment": {
+      "f1-score": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 200.0
+    }
+  },
+  "split": "held-out test",
+  "test_samples": 800
+}
